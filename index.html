@@ -1075,24 +1075,6 @@ Identification and Initialization Analysis</h5></a> (contributor, &sect;2)
   <!-- Custom scripts -->
   <script src="js/agency.js"></script>
 
-  <!-- Waline -->
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-    init({
-      el: '#waline',
-      serverURL: 'https://waline-base.vercel.app',
-      lang: 'en',
-    });
-  </script>
-
-  <script>
-    // TODO: this script should be removed later --- just a temporary solution
-    if (window.location.hostname === 'me.billhu.us') {
-      window.location.replace('https://about.billhu.us');
-    }
-  </script>
-
 </body>
 
 </html>
