@@ -3,4 +3,4 @@ Allow: /
 Allow: /css/
 Allow: /img/
 Disallow: /vendors/
-Sitemap: https://about.billhu.us/sitemap.xml
+Sitemap: https://www.wyh.one/sitemap.xml
