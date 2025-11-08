@@ -303,8 +303,8 @@
   font-size: 1.35rem;
   border-radius: 999px;
   color: #f6f8ff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(248, 252, 255, 0.18);
+  background: rgba(16, 20, 32, 0.55);
   box-shadow: 0 18px 40px rgba(4, 6, 12, 0.55);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -318,10 +318,10 @@
 .glass-icon-btn::after {
   content: "";
   position: absolute;
-  inset: 12%;
+  inset: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.02));
-  opacity: 0.8;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.05));
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -334,13 +334,13 @@
 }
 
 .glass-icon-btn--dark {
-  background: rgba(6, 7, 12, 0.85);
-  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(12, 16, 28, 0.52);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .glass-icon-btn--dark:hover,
 .glass-icon-btn--dark:focus {
-  background: rgba(18, 22, 34, 0.95);
+  background: rgba(20, 25, 40, 0.7);
 }
 
 .glass-icon-btn--blue {
@@ -354,6 +354,239 @@
 .glass-icon-btn--blue:focus {
   background: rgba(53, 158, 214, 0.55);
   box-shadow: 0 26px 54px rgba(9, 27, 44, 0.6);
+}
+
+.profile-photo {
+  box-shadow: 0 18px 45px rgba(6, 7, 12, 0.35);
+}
+
+/* =====================
+   Skills Section + Grid
+   ===================== */
+.skills-section {
+  background: linear-gradient(135deg, #101722 0%, #0b2535 52%, #0a1b2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(500px 500px at 20% 20%, rgba(255,255,255,0.08), transparent 65%),
+              radial-gradient(600px 600px at 80% 0%, rgba(41,136,188,0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.skills-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills-intro {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.skill-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.skill-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(15, 18, 30, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 32px rgba(5, 7, 15, 0.45);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.25), transparent 55%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.skill-card:hover,
+.skill-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 26px 44px rgba(5, 7, 15, 0.55);
+}
+
+.skill-card:hover::after,
+.skill-card:focus-within::after {
+  opacity: 1;
+}
+
+.skill-icon {
+  flex: 0 0 56px;
+  height: 56px;
+  width: 56px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.skill-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.skill-content h5 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.skill-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-tags span {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================
+   Contact Section Revamp
+   ===================== */
+.contact-section {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(41, 136, 188, 0.35), transparent 60%),
+              radial-gradient(120% 140% at 100% 10%, rgba(18, 22, 34, 0.9), #06070d);
+  color: #f5f8ff;
+  padding: 6rem 0;
+}
+
+.contact-shell {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 920px;
+  padding: 48px;
+  border-radius: 28px;
+  background: rgba(10, 12, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 30px 90px rgba(3, 5, 15, 0.55);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
+.contact-card-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-card-header p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-card-header .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.4rem;
+}
+
+.contact-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.contact-item {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-item .label {
+  font-size: 0.8rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.45rem;
+}
+
+.contact-item a,
+.contact-item span {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #f6f8ff;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 32px 24px;
+  }
+  .contact-cta {
+    flex-direction: column;
+  }
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -723,6 +956,76 @@ header.masthead .intro-text .intro-heading {
 
 aside.clients img {
     margin: 10px auto
+}
+
+.timeline-section {
+  background: linear-gradient(180deg, #070b13 0%, #0b1524 45%, #050810 100%);
+  color: #eaf2ff;
+}
+
+.timeline-section .section-heading {
+  color: #f8fbff;
+}
+
+.timeline-section .timeline:before {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.timeline-section .timeline .timeline-panel {
+  background: transparent;
+  border-radius: 24px;
+  border: none;
+  box-shadow: none;
+  color: #e3ecff;
+}
+
+.timeline-section .timeline .timeline-panel:before,
+.timeline-section .timeline .timeline-panel:after,
+.timeline-section .timeline > li.timeline-inverted > .timeline-panel:before,
+.timeline-section .timeline > li.timeline-inverted > .timeline-panel:after {
+  display: none;
+}
+
+.timeline-section .timeline .timeline-heading h4,
+.timeline-section .timeline .timeline-heading h5 {
+  color: #f7fbff;
+}
+
+.timeline-section .timeline .timeline-body p {
+  color: rgba(229, 236, 255, 0.9);
+}
+
+.timeline-section .timeline > li .timeline-image {
+  background: rgba(7, 10, 18, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.timeline-section .timeline > li .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 280ms ease, filter 280ms ease;
+}
+
+.timeline-section .timeline > li .timeline-image:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 22px 50px rgba(6, 10, 25, 0.65);
+}
+
+.timeline-section .timeline > li .timeline-image:hover img {
+  filter: saturate(1.15);
+}
+
+.timeline-section .timeline .timeline-body p + p {
+  margin-top: 0.75rem;
+}
+
+.timeline-section .timeline > li {
+  margin-bottom: 70px;
 }
 
 .timeline {
