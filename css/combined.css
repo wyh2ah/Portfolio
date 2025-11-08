@@ -1474,6 +1474,38 @@ html {
   transform: translateY(-3px);
 }
 
+@media (max-width: 768px) {
+  .logo-pill {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.8rem;
+    margin: -2rem auto 2.5rem;
+    border-radius: 32px;
+  }
+
+  .pill-logo img {
+    max-height: 42px;
+  }
+
+  .intro-section .team-member {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .intro-section .team-member img {
+    width: 240px !important;
+    height: auto !important;
+  }
+
+  #intro-section {
+    margin-top: 0 !important;
+  }
+
+  .about-cta .btn {
+    width: 100%;
+  }
+}
+
 body {
   font-family: 'Source Sans Pro';
 }
