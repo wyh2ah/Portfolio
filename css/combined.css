@@ -959,7 +959,7 @@ aside.clients img {
 }
 
 .timeline-section {
-  background: linear-gradient(180deg, #070b13 0%, #0b1524 45%, #050810 100%);
+  background: linear-gradient(180deg, #101b2d 0%, #132743 55%, #0f1d32 100%);
   color: #eaf2ff;
 }
 
@@ -977,6 +977,7 @@ aside.clients img {
   border: none;
   box-shadow: none;
   color: #e3ecff;
+  padding: 0 1.5rem;
 }
 
 .timeline-section .timeline .timeline-panel:before,
@@ -1412,6 +1413,67 @@ html {
   height: 100%;
 }
 
+/* =====================
+   Intro Section + Logo Pill
+   ===================== */
+.intro-section {
+  background: radial-gradient(150% 180% at 0% 0%, rgba(80, 138, 255, 0.18), transparent 65%),
+              linear-gradient(120deg, #050a13 0%, #0a1324 65%, #05080f 100%);
+  color: #eaf0ff;
+  padding: 2.8rem 0 4.5rem;
+}
+
+.intro-section .lead,
+.intro-section h4,
+.intro-section p {
+  color: #e6edff;
+}
+
+.intro-section a {
+  color: #8bd1ff;
+}
+
+.intro-section a:hover {
+  color: #a7e0ff;
+}
+
+.logo-pill {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.3rem 2.8rem;
+  margin: -4rem auto 3rem;
+  border-radius: 999px;
+  background: rgba(13, 18, 27, 0.8);
+  border: 1px solid rgba(129, 150, 185, 0.3);
+  box-shadow: 0 22px 45px rgba(3, 6, 12, 0.55);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+}
+
+.logo-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(140deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+.pill-logo img {
+  max-height: 55px;
+  width: auto;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
+  transition: transform 200ms ease;
+}
+
+.pill-logo:hover img {
+  transform: translateY(-3px);
+}
+
 body {
   font-family: 'Source Sans Pro';
 }
@@ -1742,8 +1804,20 @@ h6 {
 }
 
 footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  background: radial-gradient(160% 200% at 0% 0%, rgba(78, 139, 255, 0.12), transparent 70%),
+              linear-gradient(160deg, #05070d 0%, #0a1324 60%, #05080f 100%);
+  color: #e5ecff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer.footer a {
+  color: #9bc9ff;
+}
+
+footer.footer a:hover {
+  color: #c8e2ff;
 }
 
 /*a {
