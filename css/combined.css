@@ -136,6 +136,27 @@
   color: #ffffff;
 }
 
+.glow-heading {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #0a101b 0%,
+    #1c2840 20%,
+    #ffffff 50%,
+    #dce6ff 55%,
+    #182338 80%,
+    #05070b 100%
+  );
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.65),
+    0 0 20px rgba(255, 255, 255, 0.35);
+}
+
 .card-body-col {
   flex: 1 1 auto;
   display: flex;
