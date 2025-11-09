@@ -1174,6 +1174,34 @@ aside.clients img {
   }
 }
 
+@media (max-width: 767.98px) {
+  .timeline:before {
+    left: 18px;
+  }
+  .timeline > li {
+    min-height: auto;
+    margin-bottom: 45px;
+    padding-left: 60px;
+  }
+  .timeline > li .timeline-panel,
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: none;
+    width: 100%;
+    padding: 0 0 15px 0;
+    text-align: left;
+  }
+  .timeline > li .timeline-image {
+    position: absolute;
+    left: 18px;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+  }
+  .timeline > li .timeline-image h4 {
+    margin-top: 12px;
+  }
+}
+
 @media (min-width: 992px) {
   .timeline > li {
     min-height: 150px;
@@ -1235,6 +1263,13 @@ aside.clients img {
 
 .team-member p {
   margin-top: 0;
+}
+
+.intro-section .team-member img {
+  width: min(320px, 80vw) !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
 }
 
 section#contact {
