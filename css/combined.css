@@ -1760,56 +1760,34 @@ html {
   inset: -6px;
   border-radius: inherit;
   background:
-    radial-gradient(120% 160% at 10% -20%, rgba(3, 18, 38, 0.92), rgba(3, 18, 38, 0)),
-    radial-gradient(120% 140% at 90% 120%, rgba(1, 10, 24, 0.88), rgba(1, 10, 24, 0)),
-    linear-gradient(90deg, rgba(0, 7, 18, 0), rgba(7, 22, 47, 0.78), rgba(0, 7, 18, 0));
+    radial-gradient(120% 160% at 10% -20%, rgba(6, 28, 51, 0.95), rgba(6, 28, 51, 0)),
+    radial-gradient(120% 140% at 90% 120%, rgba(3, 16, 34, 0.9), rgba(3, 16, 34, 0)),
+    linear-gradient(90deg, rgba(0, 12, 28, 0), rgba(14, 62, 96, 0.85), rgba(0, 12, 28, 0));
   z-index: -1;
   background-size: 180% 180%, 180% 180%, 260% 100%;
   background-position: 0% 50%, 0% 50%, -60% 50%;
   filter: blur(14px) brightness(1);
   opacity: 0.9;
   animation:
-    coolLampGlow 14s ease-in-out infinite alternate,
-    coolLampFlicker 4.8s linear infinite;
+    coolLampGlow 12s linear infinite;
   pointer-events: none;
 }
 
 @keyframes coolLampGlow {
   0% {
-    opacity: 0.55;
-    transform: scale(0.985);
-    background-position: 0% 45%, 0% 55%, -60% 50%;
+    opacity: 0.6;
+    transform: scale(0.99);
+    background-position: 0% 48%, 0% 52%, -60% 50%;
   }
-  45% {
+  50% {
     opacity: 0.95;
     transform: scale(1.01);
-    background-position: 0% 50%, 0% 50%, 40% 50%;
+    background-position: 0% 50%, 0% 50%, 150% 50%;
   }
   100% {
-    opacity: 0.68;
-    transform: scale(1.02);
-    background-position: 0% 50%, 0% 50%, 160% 50%;
-  }
-}
-
-@keyframes coolLampFlicker {
-  0% {
-    filter: blur(14px) brightness(0.9);
-  }
-  12% {
-    filter: blur(14px) brightness(1.08);
-  }
-  24% {
-    filter: blur(14px) brightness(0.92);
-  }
-  40% {
-    filter: blur(14px) brightness(1.14);
-  }
-  58% {
-    filter: blur(14px) brightness(0.94);
-  }
-  100% {
-    filter: blur(14px) brightness(1);
+    opacity: 0.6;
+    transform: scale(0.99);
+    background-position: 0% 48%, 0% 52%, -60% 50%;
   }
 }
 
