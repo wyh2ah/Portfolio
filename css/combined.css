@@ -940,6 +940,50 @@ header.masthead h1 {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
 }
 
+.hero-typewriter {
+  --type-delay: 0.5s;
+  --type-duration: 2.2s;
+  --type-chars: 40;
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.9);
+  padding-right: 4px;
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+  visibility: hidden;
+  animation: hero-typewriter var(--type-duration) steps(var(--type-chars)) var(--type-delay) forwards,
+             hero-typewriter-caret 0.7s steps(1) var(--type-delay) infinite,
+             hero-typewriter-hide 0s linear calc(var(--type-delay) + var(--type-duration)) forwards,
+             hero-typewriter-reveal 0s linear var(--type-delay) forwards;
+}
+
+@keyframes hero-typewriter {
+  to {
+    width: calc(var(--type-chars) * 1ch);
+  }
+}
+
+@keyframes hero-typewriter-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hero-typewriter-hide {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes hero-typewriter-reveal {
+  to {
+    visibility: visible;
+  }
+}
+
 @keyframes hero-signature-stroke {
   to {
     stroke-dashoffset: 0;
@@ -961,6 +1005,13 @@ header.masthead h1 {
     stroke-dashoffset: 0;
     fill: rgba(255, 255, 255, 0.95);
   }
+
+  .hero-typewriter {
+    width: auto;
+    animation: none;
+    border-right: 0;
+    visibility: visible;
+  }
 }
 
 .hero-subheading {
@@ -970,6 +1021,10 @@ header.masthead h1 {
   font-style: italic;
   letter-spacing: 0.05em;
   color: rgba(238, 240, 247, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .service-heading {
