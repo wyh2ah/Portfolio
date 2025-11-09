@@ -520,6 +520,74 @@
 }
 
 /* =====================
+   GitHub Section
+   ===================== */
+.github-section {
+  background: linear-gradient(135deg, #070b13 0%, #0a0f1e 48%, #05070c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.github-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px 600px at 15% 30%, rgba(255,255,255,0.08), transparent 70%),
+              radial-gradient(700px 700px at 80% 20%, rgba(27,76,255,0.15), transparent 65%);
+  pointer-events: none;
+}
+
+.github-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.github-intro {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.github-grid {
+  margin: 2.5rem auto;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(3, 6, 14, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 48px rgba(3, 4, 8, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-chart {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
+}
+
+.github-cta {
+  margin-top: 1rem;
+}
+
+.github-cta .btn-dark {
+  background-color: #05070c;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.github-cta .btn-dark:hover,
+.github-cta .btn-dark:focus {
+  background-color: #0e121f;
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* =====================
    Contact Section Revamp
    ===================== */
 .contact-section {
