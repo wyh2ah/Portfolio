@@ -318,6 +318,26 @@
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
   color: #f5f7ff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  line-height: 1;
+}
+
+.about-btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow: visible;
+  padding: 0.75rem 1rem 0.5rem;
+}
+
+.about-btn-row .about-btn {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .about-btn::before {
