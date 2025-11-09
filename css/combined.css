@@ -855,6 +855,22 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
+header.masthead h1 {
+  font-family: 'Great Vibes', 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+  letter-spacing: 0.05em;
+  font-size: clamp(3rem, 6.5vw, 4.8rem);
+  text-transform: none;
+}
+
+.hero-subheading {
+  font-family: 'Droid Serif', 'Source Sans Pro', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  color: rgba(238, 240, 247, 0.85);
+}
+
 .service-heading {
   margin: 15px 0;
   text-transform: none;
