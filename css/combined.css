@@ -900,6 +900,68 @@ header.masthead h1 {
   top: -3px;
 }
 
+.hero-name {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.hero-name__fallback {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-signature {
+  width: min(460px, 85vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.hero-signature text {
+  font-family: 'Great Vibes', 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  animation: hero-signature-stroke 4.2s ease forwards,
+             hero-signature-fill 1.4s ease forwards;
+  animation-delay: 0.5s, 5.4s;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes hero-signature-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hero-signature-fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgba(255, 255, 255, 0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-signature text {
+    animation: none;
+    stroke-dashoffset: 0;
+    fill: rgba(255, 255, 255, 0.95);
+  }
+}
+
 .hero-subheading {
   font-family: 'Droid Serif', 'Source Sans Pro', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: clamp(1rem, 2.4vw, 1.35rem);
