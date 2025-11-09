@@ -5,7 +5,7 @@
 #professional.pro-section {
   /* Rich gradient background to showcase glass cards */
   background: radial-gradient(1200px 600px at 10% 10%, #0b1a2a 0%, transparent 40%),
-              radial-gradient(1000px 600px at 90% 0%, #2b1055 0%, transparent 45%),
+              radial-gradient(1000px 600px at 90% 0%, #471679 0%, transparent 50%),
               linear-gradient(180deg, #0e1117 0%, #151a23 100%);
   padding: 80px 0;
   font-size: 1.125rem;
