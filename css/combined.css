@@ -919,11 +919,12 @@ header.masthead h1 {
   display: block;
   margin: 0 auto;
   overflow: visible;
+  transform: translateY(-10px);
 }
 
 .hero-signature text {
   font-family: 'Great Vibes', 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
-  font-size: clamp(3rem, 10vw, 4.5rem);
+  font-size: clamp(3.8rem, 12vw, 5.8rem);
   fill: transparent;
   stroke: rgba(255, 255, 255, 0.92);
   stroke-width: 2.2px;
@@ -935,7 +936,7 @@ header.masthead h1 {
   dominant-baseline: middle;
   animation: hero-signature-stroke 4.2s ease forwards,
              hero-signature-fill 1.4s ease forwards;
-  animation-delay: 0.5s, 5.4s;
+  animation-delay: 0.5s, 1.6s;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
 }
 
