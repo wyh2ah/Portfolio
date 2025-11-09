@@ -548,6 +548,10 @@
 }
 
 .github-grid {
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  --lift: 0px;
+  --card-scale: 1;
   margin: 2.5rem auto;
   padding: 32px;
   border-radius: 24px;
@@ -561,6 +565,9 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(1200px) translate3d(0, var(--lift), 0) rotateX(var(--tiltX)) rotateY(var(--tiltY)) scale(var(--card-scale));
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
 }
 
 .github-chart {
@@ -570,6 +577,14 @@
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
   position: relative;
   z-index: 2;
+}
+
+.github-grid:hover,
+.github-grid.is-tilting {
+  --lift: -8px;
+  --card-scale: 1.012;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 60px rgba(3, 4, 8, 0.75);
 }
 
 .github-grid::before,
