@@ -1584,8 +1584,10 @@ html {
    Intro Section + Logo Pill
    ===================== */
 .intro-section {
-  background: radial-gradient(150% 180% at 0% 0%, rgba(80, 138, 255, 0.18), transparent 65%),
-              linear-gradient(120deg, #050a13 0%, #0a1324 65%, #05080f 100%);
+  background:
+    radial-gradient(160% 190% at 0% 0%, rgba(111, 174, 224, 0.32), rgba(5, 12, 18, 0) 65%),
+    radial-gradient(160% 210% at 120% 20%, rgba(52, 109, 155, 0.42), rgba(4, 10, 16, 0) 70%),
+    linear-gradient(132deg, #041835 0%, #063354 60%, #031f3a 100%);
   color: #eaf0ff;
   padding: 2.8rem 0 4.5rem;
 }
@@ -1619,6 +1621,8 @@ html {
   box-shadow: 0 22px 45px rgba(3, 6, 12, 0.55);
   backdrop-filter: blur(22px) saturate(180%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
+  overflow: visible;
+  z-index: 0;
 }
 
 .logo-pill::before {
@@ -1628,6 +1632,73 @@ html {
   border-radius: inherit;
   background: linear-gradient(140deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
   pointer-events: none;
+}
+
+.logo-pill::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 160% at 10% -20%, rgba(188, 230, 255, 0.9), rgba(188, 230, 255, 0)),
+    radial-gradient(120% 140% at 90% 120%, rgba(92, 158, 214, 0.75), rgba(92, 158, 214, 0)),
+    linear-gradient(90deg, rgba(30, 60, 90, 0), rgba(164, 219, 255, 0.7), rgba(30, 60, 90, 0));
+  z-index: -1;
+  background-size: 180% 180%, 180% 180%, 260% 100%;
+  background-position: 0% 50%, 0% 50%, -60% 50%;
+  filter: blur(14px) brightness(1);
+  opacity: 0.9;
+  animation:
+    coolLampGlow 14s ease-in-out infinite alternate,
+    coolLampFlicker 4.8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes coolLampGlow {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.985);
+    background-position: 0% 45%, 0% 55%, -60% 50%;
+  }
+  45% {
+    opacity: 0.95;
+    transform: scale(1.01);
+    background-position: 0% 50%, 0% 50%, 40% 50%;
+  }
+  100% {
+    opacity: 0.68;
+    transform: scale(1.02);
+    background-position: 0% 50%, 0% 50%, 160% 50%;
+  }
+}
+
+@keyframes coolLampFlicker {
+  0% {
+    filter: blur(14px) brightness(0.9);
+  }
+  12% {
+    filter: blur(14px) brightness(1.08);
+  }
+  24% {
+    filter: blur(14px) brightness(0.92);
+  }
+  40% {
+    filter: blur(14px) brightness(1.14);
+  }
+  58% {
+    filter: blur(14px) brightness(0.94);
+  }
+  100% {
+    filter: blur(14px) brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-pill::after {
+    animation: none;
+    opacity: 0.75;
+    filter: blur(14px) brightness(0.95);
+  }
 }
 
 .pill-logo img {
