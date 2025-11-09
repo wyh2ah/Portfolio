@@ -867,7 +867,7 @@ header.masthead h1 {
   font-size: clamp(1rem, 2.4vw, 1.35rem);
   font-weight: 300;
   font-style: italic;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
   color: rgba(238, 240, 247, 0.85);
 }
 
