@@ -310,6 +310,7 @@
   border-radius: 999px;
   padding-left: 3rem;
   padding-right: 3rem;
+  border: 0;
 }
 
 .about-btn {
@@ -1177,6 +1178,69 @@ header.masthead h1 {
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 2.25rem;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, 0);
+  border-radius: 999px;
+  border: none;
+  color: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none;
+  background: transparent;
+  animation: hero-scroll-bounce 2.4s ease-in-out infinite;
+  z-index: 3;
+}
+
+.hero-scroll-indicator__chevron {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  animation: hero-scroll-chevron 2.4s ease-in-out infinite;
+}
+
+.hero-scroll-indicator:hover,
+.hero-scroll-indicator:focus {
+  background: transparent;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@keyframes hero-scroll-bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+    opacity: 0.82;
+  }
+  50% {
+    transform: translate(-50%, 10px);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-scroll-chevron {
+  0%, 100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-indicator,
+  .hero-scroll-indicator__chevron {
+    animation: none;
+  }
 }
 
 .service-heading {
