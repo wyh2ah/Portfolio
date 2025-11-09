@@ -1703,9 +1703,9 @@ html {
    ===================== */
 .intro-section {
   background:
-    radial-gradient(160% 190% at 0% 0%, rgba(111, 174, 224, 0.32), rgba(5, 12, 18, 0) 65%),
-    radial-gradient(160% 210% at 120% 20%, rgba(52, 109, 155, 0.42), rgba(4, 10, 16, 0) 70%),
-    linear-gradient(132deg, #041835 0%, #063354 60%, #031f3a 100%);
+    radial-gradient(180% 220% at -10% -20%, rgba(20, 58, 96, 0.25), rgba(3, 9, 20, 0) 60%),
+    radial-gradient(140% 200% at 120% 10%, rgba(5, 24, 49, 0.45), rgba(1, 5, 12, 0) 70%),
+    linear-gradient(135deg, #010915 0%, #03142e 58%, #010714 100%);
   color: #eaf0ff;
   padding: 2.8rem 0 4.5rem;
 }
@@ -1734,9 +1734,11 @@ html {
   padding: 1.3rem 2.8rem;
   margin: -4rem auto 3rem;
   border-radius: 999px;
-  background: rgba(13, 18, 27, 0.8);
-  border: 1px solid rgba(129, 150, 185, 0.3);
-  box-shadow: 0 22px 45px rgba(3, 6, 12, 0.55);
+  background: rgba(5, 9, 18, 0.92);
+  border: 1px solid rgba(86, 104, 138, 0.35);
+  box-shadow:
+    0 22px 45px rgba(3, 6, 12, 0.55),
+    0 0 32px rgba(4, 12, 26, 0.4);
   backdrop-filter: blur(22px) saturate(180%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   overflow: visible;
@@ -1758,9 +1760,9 @@ html {
   inset: -6px;
   border-radius: inherit;
   background:
-    radial-gradient(120% 160% at 10% -20%, rgba(188, 230, 255, 0.9), rgba(188, 230, 255, 0)),
-    radial-gradient(120% 140% at 90% 120%, rgba(92, 158, 214, 0.75), rgba(92, 158, 214, 0)),
-    linear-gradient(90deg, rgba(30, 60, 90, 0), rgba(164, 219, 255, 0.7), rgba(30, 60, 90, 0));
+    radial-gradient(120% 160% at 10% -20%, rgba(3, 18, 38, 0.92), rgba(3, 18, 38, 0)),
+    radial-gradient(120% 140% at 90% 120%, rgba(1, 10, 24, 0.88), rgba(1, 10, 24, 0)),
+    linear-gradient(90deg, rgba(0, 7, 18, 0), rgba(7, 22, 47, 0.78), rgba(0, 7, 18, 0));
   z-index: -1;
   background-size: 180% 180%, 180% 180%, 260% 100%;
   background-position: 0% 50%, 0% 50%, -60% 50%;
