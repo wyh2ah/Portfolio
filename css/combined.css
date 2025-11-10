@@ -141,20 +141,20 @@
   display: inline-block;
   background: linear-gradient(
     90deg,
-    #0a101b 0%,
-    #1c2840 20%,
-    #ffffff 50%,
-    #dce6ff 55%,
-    #182338 80%,
-    #05070b 100%
+    #072c40 0%,
+    #0f4a6b 20%,
+    #0f6b95 40%,
+    #49b9ff 60%,
+    #9adedc 80%,
+    #d5f6ff 100%
   );
-  background-size: 280% 100%;
+  background-size: 100% 100%;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.65),
-    0 0 20px rgba(255, 255, 255, 0.35);
+    0 0 16px rgba(133, 206, 255, 0.75),
+    0 0 32px rgba(102, 214, 255, 0.45);
 }
 
 .card-body-col {
